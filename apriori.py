@@ -2,6 +2,12 @@ import streamlit as st
 import pandas as pd
 from mlxtend.frequent_patterns import apriori, association_rules
 
+with st.sidebar:
+    st.markdown("## 🛒 Hilmy Store")
+    st.markdown("### Recommendation System")
+    st.caption("Market Basket Analysis")
+    st.divider()
+
 df = pd.read_csv("bread_basket.csv")
 df.columns = df.columns.str.strip().str.lower()
 
